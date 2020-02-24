@@ -29,23 +29,25 @@ public class InitializrApplication {
 				
 		// Iniciando Orientação a Objetos
 		Conta contaDoMiro = new Conta();
+		
 		contaDoMiro.titular = "Miro";
 		contaDoMiro.saldo = 1000.0;
 		contaDoMiro.possuiLimite = true;
+		
 		contaDoMiro.deposita(1000);
-		contaDoMiro.saca(950);
-		contaDoMiro.saca(1500);
+		contaDoMiro.saca(2000);
 		
 		Conta contaDoJoao = new Conta();
+		
 		contaDoJoao.titular = "João";
 		contaDoJoao.saldo = 1000.0;
+	
 		contaDoJoao.deposita(1000);
-		contaDoJoao.saca(950);
-		contaDoJoao.saca(1500);
+		contaDoJoao.saca(1000);
 		
 		System.out.println("----------------------------------------");
 		System.out.println("----------------------------------------");
-		contaDoMiro.tranfere(100, contaDoJoao);
+		contaDoJoao.tranfere(500, contaDoMiro);
 		
 	}
 	
