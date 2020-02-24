@@ -27,31 +27,28 @@ public class InitializrApplication {
 			contadorByte++;
 		}
 					
+		//
 		// Iniciando Orientação a Objetos
+		//
 		Conta contaDoMiro = new Conta();
-		
+		Conta contaDoJoao = new Conta();
 		contaDoMiro.setTitular("Miro");
 		contaDoMiro.setSaldo(1000.0);
 		contaDoMiro.setPossuiLimite(true);
-		
-		contaDoMiro.deposita(1000);
-		contaDoMiro.saca(1000);
-		
-		Conta contaDoJoao = new Conta();
-		
 		contaDoJoao.setTitular("João");
 		contaDoJoao.setSaldo(1000.0);
-	
-		contaDoJoao.deposita(1000);
-		contaDoJoao.saca(1000);
-			
-		System.out.println("----------------------------------------");
-		System.out.println("----------------------------------------");
-		contaDoMiro.tranfere(2000, contaDoJoao);
-		contaDoJoao.tranfere(1000, contaDoMiro);
+		contaDoJoao.setPossuiLimite(false);
 		
-		// João não possui limite operação não será realizada
-		contaDoJoao.tranfere(5000, contaDoMiro);
+		contaDoMiro.deposita(100);
+		contaDoMiro.saca(150);
+		contaDoMiro.tranfere(1000, contaDoJoao);
+		
+		contaDoJoao.deposita(100);
+		contaDoJoao.saca(150);
+		contaDoJoao.tranfere(1000, contaDoMiro);
+		contaDoJoao.tranfere(5000, contaDoMiro); // João não possui limite operação não será realizada
+	
+		System.out.println("Quantidade Atual de Contas.: " + Conta.getQtdeConta()); // Informa a quantidade de Contas
 		
 	}
 	

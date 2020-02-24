@@ -7,7 +7,6 @@ public class Conta {
 	// Construtor da Classe utilizado para controlar quantidade de contas
 	Conta() {
 		Conta.qtdeConta += 1;
-		System.out.println("Quantidade Atual de Contas.: " + Conta.qtdeConta);
 	}
 	
 	public static int getQtdeConta() {
@@ -51,7 +50,6 @@ public class Conta {
 	void saca(double valor) {
 		if(podeSacar(valor)) {
 			this.saldo -= valor;
-			System.out.println("Saldo atual do " + this.titular + " é: " + this.saldo);
 		}
 		else {
 			System.out.println("Operação não permitida saldo do " + this.titular + " inferior ao valor solicitado. Passar bem.");
@@ -60,18 +58,19 @@ public class Conta {
 	
 	void deposita(double valor) {
 		this.saldo += valor;
-		System.out.println("Saldo atual do " + this.titular + " é: " + this.saldo);
 	}
 	
 	void tranfere(double valor, Conta contaDestino) {
 		if(podeSacar(valor)) {
 			this.saldo -= valor;
-			contaDestino.saldo +=contaDestino.saldo;
+			contaDestino.saldo +=valor;
+			System.out.println("\n=================================");
+			System.out.println("Tranferencia realizada com sucesso!");
 			System.out.println("Saldo atual do " + this.titular + " é: " + this.saldo);
-			System.out.println("Saldo atual do " + contaDestino.titular + " é: " + contaDestino.saldo);			
+			System.out.println("Saldo atual do " + contaDestino.titular + " é: " + contaDestino.saldo);	
 		}
 		else {
-			System.out.println("Operação não permitida saldo do " + this.titular + " inferior ao valor solicitado. Passar bem.");
+			System.out.println("\nOperação não permitida saldo do " + this.titular + " inferior ao valor solicitado.\n");
 		}
 	}
 	
