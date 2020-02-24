@@ -35,7 +35,7 @@ public class InitializrApplication {
 		contaDoMiro.possuiLimite = true;
 		
 		contaDoMiro.deposita(1000);
-		contaDoMiro.saca(2000);
+		contaDoMiro.saca(2500);
 		
 		Conta contaDoJoao = new Conta();
 		
