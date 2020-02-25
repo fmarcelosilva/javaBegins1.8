@@ -2,9 +2,9 @@ package com.java.initializr;
 
 public class Funcionarios {
 	
-	private String nome;
-	private String cpf;
-	private double salario;
+	protected String nome;
+	protected String cpf;
+	protected double salario;
 	
 	public String getNome() {
 		return nome;
@@ -23,6 +23,10 @@ public class Funcionarios {
 	}
 	public void setSalario(double salario) {
 		this.salario = salario;
+	}
+	
+	public double getBonificacao() {
+		return this.salario * 0.10;
 	}
 
 }
