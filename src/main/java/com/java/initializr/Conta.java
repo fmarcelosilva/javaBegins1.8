@@ -3,20 +3,15 @@ package com.java.initializr;
 public class Conta {
 	
 	private static int qtdeConta;
-	
-	// Construtor da Classe utilizado para controlar quantidade de contas
-	Conta() {
-		Conta.qtdeConta += 1;
-	}
-	
-	public static int getQtdeConta() {
-		return Conta.qtdeConta;
-	}
-
 	private int numero;
 	private String titular;
 	private double saldo;
 	private boolean possuiLimite = false;
+	
+	// Construtor da Classe utilizado para controlar quantidade de contas
+	Conta() {
+		Conta.qtdeConta += 1;
+	}	
 	
 	public int getNumero() {
 		return numero;
@@ -45,6 +40,10 @@ public class Conta {
 
 	public void setPossuiLimite(boolean possuiLimite) {
 		this.possuiLimite = possuiLimite;
+	}
+	
+	public static int getQtdeConta() {
+		return Conta.qtdeConta;
 	}
 
 	void saca(double valor) {
@@ -84,3 +83,4 @@ public class Conta {
 	}
 
 }
+ 

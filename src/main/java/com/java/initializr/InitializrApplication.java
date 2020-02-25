@@ -53,3 +53,14 @@ public class InitializrApplication {
 	}
 	
 }
+
+
+/*
+
+Execução por linha de Comando
+- Gere o arquivo .jar do projeto pela própria IDE > Export > Java/JarFile > ...
+
+cd C:\Users\fmarc\Documents\Java\initializr\src\main\java\com\java\initializr 
+java -classpath banco.jar com.java.initializr.InitializrApplication
+
+*/
